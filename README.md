@@ -1,75 +1,112 @@
-Bitcoin Blockcraft
-An Interactive Bitcoin Market Analysis & Blockchain Dashboard
+Bitcoin Blockcraft: Market & Network Analysis Engine
 
-Bitcoin Blockcraft is a high-performance web application built with Streamlit, designed to provide users with a comprehensive suite for Bitcoin market analysis, blockchain data visualization, and portfolio tracking. By leveraging real-time data, the platform offers deep insights into price action and network health through a professional, minimalist interface.
+Live Demo: [Explore the Interactive Dashboard](https://bitcoin-blockcraft.streamlit.app/)
 
-Live Demo Link : https://bitcoin-blockcraft.streamlit.app/
+Live Features
 
-Key Features
-1. Real-Time Market Monitoring
-Live Price Tracking: Real-time Bitcoin price data fetched via high-reliability exchange APIs.
+Real-Time Market Monitoring: Dynamic Bitcoin price tracking with sub-minute refresh rates using high-reliability exchange APIs.
 
-Historical Trend Analysis: Dynamic charting with configurable timeframes (24h, 7d, 30d, 1y).
+On-Chain Telemetry: Direct visualization of blockchain health, including hash rate fluctuations and mempool congestion.
 
-Core Market Metrics: Immediate access to Market Cap, 24h Volume, and Circulating Supply.
+Profit/Loss Simulation: Interactive engine allowing users to simulate portfolio performance using weighted historical entry points.
 
-2. Technical Analysis Suite
-Trend Identification: Integrated Moving Averages, including customizable EMA and SMA overlays.
+Technical Overlay: Toggleable EMA/SMA indicators and volatility bands for advanced trend identification.
 
-Risk Assessment: Volatility indicators designed to analyze price swings and market stability.
+Project Context (2026)
 
-Momentum Oscillators: Standard technical indicators to identify overbought or oversold market conditions.
+This repository serves as an advanced implementation of a financial telemetry dashboard focused on the intersection of FinTech and Data Engineering.
 
-3. Blockchain & Network Insights
-Network Health: Real-time monitoring of block height, network hash rate, and mining difficulty.
+It demonstrates how raw, high-frequency JSON market and blockchain data can be transformed into structured, actionable intelligence through interactive visualization.
 
-On-Chain Activity: Visual data representations of transaction trends and current mempool status.
+Prototype Objectives
 
-4. Interactive Investment Simulator
-P/L Calculator: Simulate potential returns based on historical entry points and capital allocation.
+The goal of this engine is to demonstrate a robust architecture for handling real-time financial data streams.
 
-Virtual Portfolio: A dedicated mockup tool to track a virtual Bitcoin position and monitor performance.
+By unifying market price action with underlying blockchain health checks, the tool provides a holistic view of the Bitcoin ecosystem.
 
-Technical Stack
-Frontend/UI: Streamlit
+Core Objectives
+
+Unified Data Schema: Structured ingestion of market and blockchain data using Python dataclasses for type-safe processing.
+
+High-Fidelity Visualization: Interactive time-series charts (via Plotly) featuring dynamic threshold markers and volatility analysis.
+
+Simulation Logic: Weighted calculation engine for historical price backtracking and portfolio modeling.
+
+Zero-Cost Execution: Fully optimized to run using open-source libraries and public API tiers (no paid credentials required).
+
+🏗 Technical Architecture
+
+The dashboard follows a modular and scalable Python structure:
+
+Data Acquisition Layer
+
+Handles asynchronous API polling for:
+
+Market price feeds
+
+Blockchain network telemetry
+
+Processing Engine
+
+Utilizes Pandas and NumPy
+
+Performs real-time mathematical transformations
+
+Computes technical indicators (EMA, SMA, volatility bands)
+
+Visualization Layer
+
+Built using Plotly
+
+Hover-active time-series analysis
+
+Interactive threshold markers and spike detection
+
+State Management
+
+Powered by Streamlit Session State
+
+Maintains portfolio allocations and simulation inputs during runtime
+
+⚙ Installation & Usage
+1. Clone the Repository
+
+'''bash
+git clone https://github.com/satyam-coder07/bitcoin-blockcraft.git
+
+cd bitcoin-blockcraft
+'''
+
+2. Install Dependencies
+
+'''bash
+pip install -r requirements.txt
+'''
+
+3. Launch the Analysis Engine
+
+'''bash
+streamlit run app.py
+'''
+
+Implementation Details
+
+Frontend/UI: Streamlit (Customized CSS for professional layout)
 
 Data Processing: Pandas, NumPy
 
-Visualization: Plotly, Matplotlib
+Visualization: Plotly
 
-Data Acquisition: Requests (via CoinGecko & Public Blockchain Nodes)
+Connectivity: Requests / API polling logic
 
-Local Installation
-Ensure you have Python 3.8+ installed on your system.
-
-Clone the Repository
-
-Bash
-git clone https://github.com/your-username/bitcoin-blockcraft.git
-cd bitcoin-blockcraft
-Environment Setup
-It is recommended to use a virtual environment:
-
-Bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install Dependencies
-
-Bash
-pip install -r requirements.txt
-Run the Application
-
-Bash
-streamlit run app.py
-Data Governance & Sources
-To ensure data integrity and transparency, this application aggregates information from:
-
-Market Data: CoinGecko API
-
-Network Data: Public Blockchain Explorers and Node APIs
+Environment: Python 3.9+
 
 Disclaimer
-This application is developed for educational and informational purposes only. The data, metrics, and simulations provided do not constitute financial, investment, or legal advice. Always perform independent research before making financial decisions.
+
+This repository is intended strictly for educational and informational purposes.
+
+It provides a framework for financial data visualization and simulation and does not constitute financial, trading, or investment advice.
 
 License
-Distributed under the MIT License. See LICENSE for more information.
+
+Distributed under the MIT License.
