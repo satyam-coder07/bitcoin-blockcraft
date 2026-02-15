@@ -34,7 +34,7 @@ Simulation Logic: Weighted calculation engine for historical price backtracking 
 
 Zero-Cost Execution: Fully optimized to run using open-source libraries and public API tiers (no paid credentials required).
 
-🏗 Technical Architecture
+Technical Architecture
 
 The dashboard follows a modular and scalable Python structure:
 
@@ -68,7 +68,7 @@ Powered by Streamlit Session State
 
 Maintains portfolio allocations and simulation inputs during runtime
 
-⚙ Installation & Usage
+Installation & Usage
 1. **Clone the Repository**
 
 ```bash
