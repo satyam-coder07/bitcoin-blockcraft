@@ -69,25 +69,25 @@ Powered by Streamlit Session State
 Maintains portfolio allocations and simulation inputs during runtime
 
 ⚙ Installation & Usage
-1. Clone the Repository
+1. **Clone the Repository**
 
-'''bash
+```bash
 git clone https://github.com/satyam-coder07/bitcoin-blockcraft.git
 
 cd bitcoin-blockcraft
-'''
+```
 
-2. Install Dependencies
+2. **Install Dependencies**
 
-'''bash
+```bash
 pip install -r requirements.txt
-'''
+```
 
-3. Launch the Analysis Engine
+3. **Launch the Analysis Engine**
 
-'''bash
+```bash
 streamlit run app.py
-'''
+```
 
 Implementation Details
 
